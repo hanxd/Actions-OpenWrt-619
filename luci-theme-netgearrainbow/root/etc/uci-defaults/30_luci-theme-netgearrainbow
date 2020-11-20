@@ -1,1 +1,7 @@
-111
+#!/bin/sh
+uci batch <<-EOF
+	set luci.themes.NetgearRainbow=/luci-static/netgearrainbow
+	set luci.main.mediaurlbase=/luci-static/netgearrainbow
+	commit luci
+EOF
+exit 0
